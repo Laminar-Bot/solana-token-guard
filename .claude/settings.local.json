@@ -1,0 +1,190 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(test:*)",
+      "Bash(npm run lint:fix:*)",
+      "mcp__tavily__tavily-search",
+      "Skill(security-auditor)",
+      "Skill(tokenomics-defi-specialist)",
+      "Skill(search-discovery-engineer)",
+      "Skill(skill-matrix)",
+      "Skill(skill-orchestrator)",
+      "Skill(skill-chains)",
+      "Skill(ml-pragmatist)",
+      "Skill(compliance-guardian)",
+      "Skill(incident-commander)",
+      "Skill(platform-builder)",
+      "Skill(product-designer)",
+      "Skill(frontend-ux-engineer)",
+      "Skill(backend-systems-engineer)",
+      "Skill(sre)",
+      "Skill(devops-iac-specialist)",
+      "Skill(finops-optimizer)",
+      "Skill(empathetic-team-lead)",
+      "Skill(product-engineering-lead)",
+      "Skill(pragmatic-architect)",
+      "Skill(executive-liaison)",
+      "Skill(security-sentinel)",
+      "Skill(dev-ex-champion)",
+      "Skill(growth-engineer)",
+      "Skill(content-strategist)",
+      "Skill(technical-marketing)",
+      "Skill(growth-engineer)",
+      "Skill(analytics-engineer)",
+      "Skill(ab-testing-engineer)",
+      "Skill(cohort-analysis-engineer)",
+      "Skill(growth-loop-engineer)",
+      "Skill(statistical-rigor-engineer)",
+      "Skill(accessibility-specialist)",
+      "Skill(localization-engineer)",
+      "Skill(infrastructure-as-code-specialist)",
+      "Skill(devops-specialist)",
+      "Skill(backend-systems-engineer)",
+      "Skill(microservices-engineer)",
+      "Skill(event-driven-architecture-engineer)",
+      "Skill(service-mesh-engineer)",
+      "Skill(api-platform-engineer)",
+      "Skill(data-engineer)",
+      "Skill(data-pipeline-engineer)",
+      "Skill(mobile-platform-engineer)",
+      "Skill(qa-automation-engineer)",
+      "Skill(release-engineering-lead)",
+      "Skill(observability-engineer)",
+      "Skill(technical-writer)",
+      "Skill(technical-lead)",
+      "Skill(technical-architect)",
+      "Skill(technical-manager)",
+      "Skill(technical-director)",
+      "Skill(technical-vp)",
+      "Skill(technical-cto)",
+      "Skill(technical-ceo)",
+      "Skill(technical-coo)",
+      "Skill(snarky-senior-engineer)",
+      "Skill(pragmatic-architect)",
+      "Skill(executive-liaison)",
+      "Skill(security-sentinel)",
+      "Skill(dev-ex-champion)",
+      "Skill(growth-engineer)",
+      "Skill(developer-advocate)",
+      "Skill(content-strategist)",
+      "Skill(technical-marketing)",
+      "Skill(technical-writer)",
+      "Skill(technical-lead)",
+      "Skill(technical-architect)",
+      "Skill(technical-manager)",
+      "Skill(technical-director)",
+      "Skill(technical-vp)",
+      "Skill(technical-cto)",
+      "Skill(technical-ceo)",
+      "Skill(technical-coo)",
+      "Skill(ml-pragmatist)",
+      "Skill(compliance-guardian)",
+      "Skill(incident-commander)",
+      "Skill(platform-builder)",
+      "Skill(product-designer)",
+      "Skill(frontend-ux-engineer)",
+      "Skill(backend-systems-engineer)",
+      "Bash(du:*)",
+      "mcp__sensei__get_engineering_guidance",
+      "WebFetch(domain:docs.claudecode.com)",
+      "Bash(chmod:*)",
+      "Bash(ls:*)",
+      "Bash(cat:*)",
+      "WebSearch",
+      "Bash(tree:*)",
+      "Bash(find:*)",
+      "mcp__sequential-thinking__sequentialthinking",
+      "mcp__neo4j-memory__*",
+      "mcp__neo4j-cypher__*",
+      "Bash(golangci-lint run:*)",
+      "Bash(golangci-lint help:*)",
+      "Bash(/usr/local/bin/go test:*)",
+      "Bash(~/.claude/scripts/neo4j-context.sh:*)",
+      "Bash(bash:*)",
+      "Bash(go test:*)",
+      "Bash(gofmt:*)",
+      "Bash(go build:*)",
+      "Bash(git -C /Users/amaro/Projects/jupiter-go log --oneline)",
+      "Bash(git config:*)",
+      "Bash(git -C /Users/amaro/Projects/jupiter-go branch:*)",
+      "Bash(git -C /Users/amaro/Projects/jupiter-go show bda61f6 --stat)",
+      "Bash(git -C /Users/amaro/Projects/jupiter-go show f726701 --stat)",
+      "Bash(git -C /Users/amaro/Projects/jupiter-go remote:*)",
+      "Bash(git -C /Users/amaro/Projects/jupiter-go config:*)",
+      "WebFetch(domain:dev.jup.ag)",
+      "WebFetch(domain:www.helius.dev)",
+      "mcp__serena__get_symbols_overview"
+    ]
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "solana-inspector",
+    "dex-aggregator",
+    "subscription-manager",
+    "ml-scorer"
+  ],
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "codemap hook session-start"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "codemap hook pre-edit"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "codemap hook post-edit"
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "codemap hook prompt-submit"
+          }
+        ]
+      }
+    ],
+    "PreCompact": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "codemap hook pre-compact"
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "codemap hook session-stop"
+          }
+        ]
+      }
+    ]
+  }
+}
